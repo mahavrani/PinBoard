@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="11201" systemVersion="17C88" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11161"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="PinBoardCell" id="gTV-IL-0wX" customClass="PinBoardCell" customModule="PinBoard" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="180" height="180"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                <rect key="frame" x="0.0" y="0.0" width="180" height="180"/>
+                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                <subviews>
+                    <view contentMode="scaleAspectFill" translatesAutoresizingMaskIntoConstraints="NO" id="yfR-Pz-MFG" customClass="CornerViews" customModule="PinBoard" customModuleProvider="target">
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="dummyImage" translatesAutoresizingMaskIntoConstraints="NO" id="LcH-Tz-9fP" customClass="CustomImageView" customModule="PinBoard" customModuleProvider="target">
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="180" id="E5O-s1-Lmj"/>
+                                </constraints>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <real key="value" value="5"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="bottom" secondItem="LcH-Tz-9fP" secondAttribute="bottom" id="0KY-MB-MSo"/>
+                            <constraint firstItem="LcH-Tz-9fP" firstAttribute="leading" secondItem="yfR-Pz-MFG" secondAttribute="leading" id="Fl9-Eb-Nit"/>
+                            <constraint firstItem="LcH-Tz-9fP" firstAttribute="top" secondItem="yfR-Pz-MFG" secondAttribute="top" id="gc2-ix-alE"/>
+                            <constraint firstAttribute="trailing" secondItem="LcH-Tz-9fP" secondAttribute="trailing" id="xEb-nk-wpo"/>
+                        </constraints>
+                        <userDefinedRuntimeAttributes>
+                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                <real key="value" value="5"/>
+                            </userDefinedRuntimeAttribute>
+                        </userDefinedRuntimeAttributes>
+                    </view>
+                </subviews>
+            </view>
+            <constraints>
+                <constraint firstAttribute="trailing" secondItem="yfR-Pz-MFG" secondAttribute="trailing" id="1Mw-Zi-ydb"/>
+                <constraint firstItem="yfR-Pz-MFG" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="5QW-vf-NAU"/>
+                <constraint firstItem="yfR-Pz-MFG" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" id="kjH-Hf-Fis"/>
+                <constraint firstAttribute="bottom" secondItem="yfR-Pz-MFG" secondAttribute="bottom" id="lNQ-dc-sD9"/>
+            </constraints>
+            <size key="customSize" width="251" height="139"/>
+            <connections>
+                <outlet property="imageView" destination="LcH-Tz-9fP" id="3Ko-MA-Mrr"/>
+                <outlet property="imageViewHeightLayoutConstraint" destination="E5O-s1-Lmj" id="2gL-Mq-ZFM"/>
+            </connections>
+            <point key="canvasLocation" x="67.5" y="19.5"/>
+        </collectionViewCell>
+    </objects>
+    <resources>
+        <image name="dummyImage" width="225" height="225"/>
+    </resources>
+</document>
